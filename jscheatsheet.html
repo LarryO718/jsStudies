@@ -215,9 +215,315 @@
 	document.write(arr.concat(arr2));
 	document.write("<hr>")
 
-
 	document.write(arr3.length);
 	document.write("<hr>");
+
+	// sorting numbers
+	points =[40, 100, 1, 5, 25, 10];
+	document.write(points.sort());
+	document.write("<hr>")
+
+	// sort numbers correctly
+	document.write(points.sort(function(a,b){
+		// document.write((a+'-'+b+'=')+(a-b)+'<br>');
+		return a-b;
+	}
+	));
+	document.write("<hr>");
+
+	// multidemensional arrays
+	instruments = ['guitar','drums','bass'];
+	genre = ['rock','hip hop','classical'];
+	document.write(instruments);
+	document.write("<hr>");
+	document.write(genre);
+	document.write("<hr>");
+
+	musicHobbies = [instruments,genre];
+	document.write(musicHobbies);
+	document.write("<hr>");
+	document.write(musicHobbies[0][1]);
+	document.write("<hr>");
+
+	// 
+	superhero = {
+		fname:'Clark',
+		lname:'Kent',
+		hname:'Super Man',
+		glasses:false,
+		powers:12,
+		weaknesses:2
+	};
+
+	document.write(superhero['hname']);
+	document.write("<br>");
+	document.write(superhero['lname']);
+	document.write("<br>");
+	document.write(superhero['hname']);
+	document.write("<br>");
+	document.write(superhero['glasses']);
+	document.write("<br>");
+	document.write(superhero['powers']);
+	document.write("<br>");
+	document.write(superhero['weaknesses']);
+	document.write("<br>");
+
+        celebrity = {
+		fname:'Justin',
+		lname:'Bieber',
+		hname:'Singer',
+		lipsync:'false',
+		powers:'youth',
+		weaknesses:'girls'
+	};
+
+	document.write(celebrity['hname']);
+	document.write("<br>");
+	document.write(celebrity['lname']);
+	document.write("<br>");
+	document.write(celebrity['hname']);
+	document.write("<br>");
+	document.write(celebrity['glasses']);
+	document.write("<br>");
+	document.write(celebrity['powers']);
+	document.write("<br>");
+	document.write(celebrity['weaknesses']);
+	document.write("<br>");
+
+	 celeb ={
+		firstn:"lady",
+		lastn:"gaga",
+		speacialty:"imitating madonna",
+		fullname: function(){
+			return this.firstn +" " + this.lastn;
+		}
+	};
+
+	celeb['genre'] = "pop"
+
+	celeb['tophits'] = 2;
+
+	celeb['tophits'] = 20;
+
+	document.write(celeb.fullname);
+	document.write("<br>");
+
+	document.write(celeb.fullname());
+	document.write("<br>");
+
+	document.write(celeb.firstn + ' ' + celeb.lastn);
+	document.write("<br>");
+
+	// comparisons
+	document.write(" 5 is equal to 10: ");
+	document.write(5 == 10);	
+	document.write("<br>");
+
+	document.write("5 is equal to 5: ");
+	document.write(5 == 10);
+	document.write("<br>");
+
+
+	document.write("'5' is equal to 5: ");
+	document.write(5 == 10);
+	document.write("<br>");
+
+
+	 // document.write("'5' is equal to 5: ");
+	// document.write('5' === 10);
+	// document.write("<br>");
+
+
+	document.write("'5' is less than 10: ");
+	document.write(5 < 10);
+	document.write("<br>");
+
+
+	document.write("5 is less than or equal to 10: ");
+	document.write(5 <= 10);
+	document.write("<br>");
+
+	document.write("5 is greater than 10: ");
+	document.write(5 > 10);
+	document.write("<br>");
+
+	document.write("5 is greater than or equal to 10: ");
+	document.write(5 >= 10);
+	document.write("<br>");
+
+
+	// logical operators
+	c1 = 5;
+	c2 = 10;
+
+	document.write("5 is less than 10: ");
+	document.write("and 5 is greater than 0: ");
+	document.write(c1 < 10) && (c1 > 0);
+	document.write("<br>");
+
+	document.write("5 is equal to 10: ");
+	document.write("or 5 is greater than 0: ");
+	document.write(c1 < 10) || (c1 > 0);
+	document.write("<br>");
+
+	document.write("5 is less than 10: ");
+	document.write("and 5 is greater than 0: ");
+	document.write(c1 == 10) && (c1 < 0);
+	document.write("<br>");
+
+	document.write("5 is NOT equal to 10: ");
+	document.write("and 5 is NOT less than 0: ");
+	document.write(!((c1 == 10) || (c1 <  0)));
+	document.write("<br>");
+
+	
+
+	document.write("5 is  not equal to 10: ");
+	document.write("or 5 is greater than 0: ");
+	document.write(c1 == 10) || (c1 <  0);
+	document.write("<br>");
+
+	// conditionals
+	// display = (c1 == c2) ? :;
+
+	display = (10 == c2)? true : false;
+	document.write(display);
+	document.write("<br>");
+
+	// if statements
+
+	myColor= "red";
+	if((myColor == "red") || (myColor == "blue") ){
+		document.write(myColor + " is my favorite color!");
+	
+	} else if (mycolor == "yellow"){
+
+			document.write(myColor + "is my least favorite color!");
+	
+	} else {
+		document.write(myColor + " is not my favorite color!");
+	
+	}
+
+	// switch statement
+	 switch (myColor){
+	 	case 'red':
+	 	case 'blue':
+	 		document.write(myColor + " is my favorite color!");
+	 		break;
+	 	case 'yellow':
+	 		document.write(myColor + " is my least favorite color!");
+	 		break;
+	 	default:
+	 		document.write(myColor + " is not my favorite color!");
+	
+	
+	 };
+			document.write("<br>");
+
+	 // this is a function
+	 function playfunc(){
+	 	var no1 = 5;
+	 	var no2 = 10;
+	 		document.write('lets add things together: ');
+	 		document.write(no1 + no2);
+	 };
+
+	 playfunc();
+
+	 // parameters
+	 function sum10(n1,n2){
+	 	return n1 + n2 + 10;
+	 };
+			document.write("<br>");
+	 		document.write(sum10(3,1));
+
+	 // function sum10(n1,n2){
+	 	// return (n1 + n2) * 10;
+	 	// document.write("<br>")
+	 
+			// document.write("<br>");
+	 		// document.write(sum10(3,1));
+
+	 		// sum10(n1,n2);
+	 		document.write("<br>")
+
+	 		// function Expression
+	 		exFunc = function(p1){
+	 			document.write(p1 * 10);
+
+	 		};
+	 		exFunc(2);
+	 		document.write("<br>");
+
+	 		// self envoked function
+	 		(function (){
+	 			document.write('this executed without a call')
+	 		})();
+
+	 		// this refers to an instance
+	 			function myFunction(){
+	 				return this;
+	 			};
+	 			console.log(myFunction());
+				document.write("<br>")
+
+
+	 			// Loops
+	 			document.write("<br>");
+	 			document.write('<br>loops execute a set amount of times</br>');
+
+	 			for(var i = 0; i < 10; ++i){
+	 				document.write(i + '<br>');
+
+	 			};
+
+	 			beers=['corona', 'modelo', 'heineken', 'bud'];
+	 			for (var i = 0; i < beers.length; ++i){
+				document.write(i +':'+ beers[i] + "<br>");
+				};
+
+				// while looop
+				var bi = 0;
+				while(bi < beers.length){
+					document.write(bi +': '+ beers[bi] +'<br>');
+					++bi;
+				};
+
+				// do while loop
+				var bidx= 0;
+				do{
+					document.write(bidx +': '+beers[bidx] +'<br>');
+					++bidx;
+				}
+				while(bidx < beers.length);
+
+
+				// For/ in loop
+				person = {
+					fname:'john',
+					lname:'doe',
+					id: 1234
+				};
+
+				
+				document.write('for in loop example');
+				// demoStr=''; 
+				objKeyVal='';
+				for(key in person){
+					objKeyVal += person[key] + ' ';
+					document.write('<p>' + objKeyVal + '</p>');
+
+				};
+
+
+
+
+
+
+
+
+
 
 
 
